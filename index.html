@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="董书华">
+    <title>个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 16px;
+        }
+        /* 元素选择器  */
+
+        header {
+            height: 60px;
+            line-height: 60px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            background: white;
+            z-index: 11;
+        }
+
+        header ul {
+            float: right;
+            list-style: none;
+        }
+        /* 后代选择器（子孙选择器）  */
+
+        header ul li {
+            float: left;
+            padding: 0 20px;
+        }
+
+        header img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .header {
+            width: 960px;
+            margin: 0 auto;
+        }
+        /* LoVe HAte */
+        /* 正常情况下的a标签样式  */
+
+        a:link {
+            color: #1E2C5C;
+            text-decoration: none;
+        }
+        /* 你点击过a标签后的样式  */
+
+        a:visited {
+            color: #1E2C5C;
+        }
+        /* 鼠标放到a链接上时的效果  */
+
+        a:hover {
+            color: gold;
+        }
+        /* 当前活动(点住鼠标不松)的a标签的样式  */
+
+        a:active {
+            color: red;
+        }
+
+        .banner {
+            padding-top: 60px;
+        }
+        /* 块级元素（行元素）block，
+        内联块元素（行内元素）inline-block，
+        上面两种性质的元素可以设置宽高。
+
+        内联元素inline,不能直接设置宽高  */
+
+        .banner img {
+            width: 100%;
+            display: block;
+        }
+
+        p {
+            color: gray;
+        }
+
+        .banner p {
+            line-height: 0.8;
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .banner p::before {
+            content: "“";
+            font-size: 36px;
+        }
+
+        .banner p::after {
+            content: "”";
+            font-size: 36px;
+        }
+
+        .container {
+            width: 960px;
+            /* 上右下左  */
+            margin: 10px auto 0 auto;
+        }
+
+        .container h2 {
+            color: #B06803;
+            font-size: 24px;
+            margin: 10px auto;
+        }
+
+        .container h2::before {
+            content: '\258a';/*▊*/
+            font-family: 宋体;
+        }
+
+        .container img {
+            width: 100%;
+            display: block;
+        }
+
+        .container p::before {
+            content: "“";
+            font-size: 22px;
+            font-family: 宋体;
+        }
+
+        .container p::after {
+            content: "”";
+            font-size: 22px;
+            font-family: 宋体;
+        }
+
+        .classmate {
+            position: relative;
+            z-index: 10;
+        }
+
+        .classmate img:nth-of-type(2){
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 100px;
+            top: 200px;
+        }
+
+        .classmate img:nth-of-type(3){
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 300px;
+            top: 300px;
+        }
+        
+        .classmate img:nth-of-type(4){
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            left: 680px;
+            top: 200px;
+        }
+
+        .classmate .pos{
+            border-radius: 50%;
+        }
+
+        footer{
+            width: 960px;
+            margin: 20px auto;
+            color: gray;
+            border-top: 1px solid gray;
+            padding-top: 20px;
+        }
+
+        footer span:nth-child(2){
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        footer address{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img src="images/logo.png" alt="logo">
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#html5">HTML5</a></li>
+                <li><a href="#classmate">我的同学</a></li>
+                <li><a href="#hometown">我的家乡</a></li>
+                <li><a href="#scholl">我的学校</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="banner" id="home">
+        <img src="images/header.jpg" alt="横幅">
+        <p>学好一门技术的唯一方法是使用它，在使用它的过程中才能真正学会它。 如果能够在使用它的过程中体会到乐趣，就是学习的最佳状态。希望大家在学习HTML5的过程中多多练习，多敲代码一定会有回报，意想不到的收获都会在使用的过程中迸发出来。
+        </p>
+    </div>
+
+    <div class="container">
+        <section class="HTML5">
+            <h2 id="html5">HTML5</h2>
+            <img src="images/html5.jpg" alt="html5.jpg">
+            <p>
+                从小就喜欢学习，感觉自己的自学能力超强，也喜欢把自己学会的知识分享给大家。我希望自己能够成为一个好老师，把每一个同学都教好，让他们都能有所成就。我认为一个好老师不仅要有较好的技术，也要对学生严格要求。放任不管只有部分同学能安心学习，严格要求才能保证绝大多数同学都能稳下心来好好学习。
+            </p>
+        </section>
+
+        <section class="classmate">
+            <h2 id="classmate">我的同学</h2>
+            <img src="images/classmates.jpg" alt="classmates.jpg">
+            <p>
+                王菲、刘若英、刘德华：很高兴和你们一起学习HTML5，感谢在这个美好的季节遇见你们！
+            </p>
+
+            <img class="pos" src="images/lry.jpg" alt="lry.jpg">
+            <img class="pos" src="images/ldh.jpg" alt="ldh.jpg">
+            <img class="pos" src="images/wf.png" alt="wf.png">
+        </section>
+
+        <section class="classmate">
+            <h2 id="hometown">我的家乡</h2>
+            <img src="images/hometown.JPG" alt="hometown.JPG">
+            <p>
+                我的家乡在南阳市方城县。这是离我家最近的风景区----七峰山森林公园，这里是中国第一大石川。石川就是在巨大的岩石上流动的溪水，七峰山整个山脉都是由一块巨大的花岗岩构成，再加上山顶湖泊常年蓄积雨水就形成了一年四季溪流不断的美丽景观。
+            </p>
+        </section>
+
+        <section class="classmate">
+            <h2 id="scholl">我的学校</h2>
+            <img src="images/lzu.jpg" alt="lzu.jpg">
+            <p>
+                我的大学----兰州大学。在这里度过了我人生中最难忘的四年时光。那里的风光，那里的人，那里的图书馆，还有那里蓝蓝的天和金黄的秋天，每每回想想来总是让心中久久不能平复。
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <span>智游教育 &copy;2016版权所有</span>
+        <span>电话：0371-123456789</span>
+        <address>郑州市经开区河南通信产业园6楼605</address>
+    </footer>
+
+
+</body>
+
+</html>
